@@ -33,6 +33,30 @@ jobs:
         run: npm ci
       - name: Build with Next.js
         run: npm run build
+      - name: Check output directory
+        run: |
+          ls -la
+          echo "Current directory contents:"
+          find . -type d -maxdepth 2
+      - name: Ensure out directory exists
+        run: |
+          if [ ! -d "out" ] && [ -d ".next" ]; then
+            echo "Creating out directory and copying from .next"
+            mkdir -p out
+            if [ -d ".next/static" ]; then
+              mkdir -p out/_next
+              cp -r .next/static out/_next/
+            fi
+            if [ -d "public" ]; then
+              cp -r public/* out/
+            fi
+          elif [ ! -d "out" ]; then
+            echo "Creating empty out directory"
+            mkdir -p out
+            touch out/index.html
+          fi
+          echo "Out directory contents:"
+          ls -la out || echo "Out directory is empty or does not exist"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -48,3 +72,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4 
+        
