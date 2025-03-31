@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: 'Camilo Castillo Portfolio',
     images: [
       {
-        url: '/images/camilo-castillo.png',
+        url: '/images/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Camilo Castillo - Software Developer Portfolio'
@@ -31,7 +31,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Camilo Castillo | Software Developer',
     description: 'Personal portfolio of Camilo Castillo, Software Developer specialized in web and mobile development.',
-    images: ['/images/camilo-castillo.png'],
+    creator: '@camilocas88',
+    images: ['/images/og-image.png'],
   },
   icons: {
     icon: '/images/logo-camilodev.png',
@@ -42,6 +43,10 @@ export const metadata: Metadata = {
       url: '/images/logo-camilodev.png',
     },
   },
+  alternates: {
+    canonical: 'https://camilo-castillo.vercel.app',
+  },
+  authors: [{ name: 'Camilo Castillo', url: 'https://camilo-castillo.vercel.app' }],
   robots: {
     index: true,
     follow: true,
