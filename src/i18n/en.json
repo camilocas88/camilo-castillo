@@ -17,18 +17,15 @@
   "about": {
     "title": "About Me",
     "paragraphs": [
-      "I am a software developer with experience building scalable, responsive, and high-performance web and mobile applications.",
-      "I focus on delivering intuitive and accessible user experiences, ensuring quality across the entire development cycle—from frontend interfaces to backend logic.",
-      "Throughout my career, I’ve worked in fast-paced environments, leading technical solutions and adapting to diverse platforms, methodologies, and technology stacks. I’m known for being versatile, self-driven, and constantly evolving as a professional."
+      "I'm a web developer with experience in building responsive and high-performance web applications. I specialize in JavaScript, React, and Next.js for frontend development.",
+      "Currently focused on creating intuitive user interfaces and improving web accessibility across different platforms.",
+      "My professional journey has involved working with diverse technologies including React, Angular, Node.js, and various cloud platforms. I pride myself on being adaptable and staying current with the latest technological trends and best practices."
     ],
     "education": "Finance Engineering - Universidad Piloto de Colombia",
     "education_label": "Education:",
     "languages": {
       "title": "Languages",
-      "list": [
-        "English - Professional",
-        "Spanish - Native"
-      ]
+      "list": ["English - Professional", "Spanish - Native"]
     }
   },
   "skills": {
@@ -48,12 +45,7 @@
         "title": "Platform for Centene Corp",
         "company": "Newfire Global Partners",
         "date": "April 2023 - Present",
-        "stack": [
-          "Angular 17",
-          "MongoDB",
-          "Microservices",
-          "Feature Flags"
-        ],
+        "stack": ["Angular 17", "MongoDB", "Microservices", "Feature Flags"],
         "description": "Complete redesign of a medical platform. Led the migration to Angular 17, implemented complex forms with validation, and developed scripts for MongoDB data management."
       },
       {
@@ -61,14 +53,7 @@
         "title": "Management System for Xybion",
         "company": "Lean Tech",
         "date": "April 2022 - April 2023",
-        "stack": [
-          "Angular 16",
-          "NestJS",
-          "TDD",
-          "JSON",
-          "XML",
-          "Microservices"
-        ],
+        "stack": ["Angular 16", "NestJS", "TDD", "JSON", "XML", "Microservices"],
         "description": "Developed a platform for migrating data from XML to JSON, implementing microservices with NestJS and frontend development in Angular with a TDD approach."
       },
       {
@@ -76,12 +61,7 @@
         "title": "News Platform for McClatchy USA",
         "company": "Endava",
         "date": "November 2021 - November 2022",
-        "stack": [
-          "Vue.js",
-          "Vanilla JS",
-          "Jest.js",
-          "Jenkins"
-        ],
+        "stack": ["Vue.js", "Vanilla JS", "Jest.js", "Jenkins"],
         "description": "Led frontend development with Vue.js and JavaScript, implemented unit tests with Jest, and configured continuous deployment with Jenkins."
       },
       {
@@ -89,11 +69,7 @@
         "title": "International Payments Platform",
         "company": "Ontop",
         "date": "January 2022 - March 2022",
-        "stack": [
-          "Angular",
-          "SSR",
-          "Microservices"
-        ],
+        "stack": ["Angular", "SSR", "Microservices"],
         "description": "Development of modules for an international payment platform using Angular with Server-Side Rendering to improve performance and SEO."
       },
       {
@@ -101,11 +77,7 @@
         "title": "Logistics System for DAT USA",
         "company": "Altimetrik Uruguay",
         "date": "May 2021 - December 2021",
-        "stack": [
-          "Angular",
-          "Frontend Architecture",
-          "Component Library"
-        ],
+        "stack": ["Angular", "Frontend Architecture", "Component Library"],
         "description": "Led the frontend team to develop a logistics system, establishing the architecture and designing a reusable component library."
       },
       {
@@ -113,12 +85,7 @@
         "title": "Banking Portal for Banbajio MX",
         "company": "StratioBD",
         "date": "March 2021 - November 2021",
-        "stack": [
-          "Angular",
-          "RxJS",
-          "Material Design",
-          "REST APIs"
-        ],
+        "stack": ["Angular", "RxJS", "Material Design", "REST APIs"],
         "description": "Developed frontend modules for the banking portal using Angular with a focus on microservices architecture and reactive flows with RxJS."
       }
     ]
@@ -144,4 +111,4 @@
   "social_title": "Follow me on social media",
   "footer_rights": "All rights reserved.",
   "download_cv": "Download CV"
-}
+} 

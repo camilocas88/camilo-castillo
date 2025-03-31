@@ -17,18 +17,15 @@
   "about": {
     "title": "Sobre Mí",
     "paragraphs": [
-      "Soy un desarrollador de software con experiencia construyendo aplicaciones web y móviles escalables, responsivas y de alto rendimiento.",
-      "Me enfoco en crear experiencias de usuario intuitivas, accesibles y funcionales, asegurando calidad en cada etapa del desarrollo, desde el frontend hasta la lógica del backend.",
-      "A lo largo de mi carrera he trabajado en entornos exigentes, liderando soluciones técnicas y adaptándome a diversas plataformas, metodologías y stacks tecnológicos. Me caracterizo por ser versátil, autodidacta y estar en constante evolución profesional."
+      "Soy un desarrollador web con experiencia en la construcción de aplicaciones web responsivas y de alto rendimiento. Me especializo en JavaScript, React y Next.js para desarrollo frontend.",
+      "Actualmente enfocado en crear interfaces de usuario intuitivas y mejorar la accesibilidad web en diferentes plataformas.",
+      "Mi trayectoria profesional ha incluido trabajo con diversas tecnologías incluyendo React, Angular, Node.js y varias plataformas en la nube. Me enorgullezco de ser adaptable y mantenerme actualizado con las últimas tendencias tecnológicas y mejores prácticas."
     ],
     "education": "Ingeniería de Financiera - Universidad Piloto de Colombia",
     "education_label": "Educación:",
     "languages": {
       "title": "Idiomas",
-      "list": [
-        "Inglés - Profesional",
-        "Español - Nativo"
-      ]
+      "list": ["Inglés - Profesional", "Español - Nativo"]
     }
   },
   "skills": {
@@ -48,12 +45,7 @@
         "title": "Plataforma para Centene Corp",
         "company": "Newfire Global Partners",
         "date": "Abril 2023 - Presente",
-        "stack": [
-          "Angular 17",
-          "MongoDB",
-          "Microservicios",
-          "Feature Flags"
-        ],
+        "stack": ["Angular 17", "MongoDB", "Microservicios", "Feature Flags"],
         "description": "Rediseño completo de una plataforma médica. Lideré la migración a Angular 17, implementé formularios complejos con validación y desarrollé scripts para la gestión de datos en MongoDB."
       },
       {
@@ -61,14 +53,7 @@
         "title": "Sistema de Gestión para Xybion",
         "company": "Lean Tech",
         "date": "Abril 2022 - Abril 2023",
-        "stack": [
-          "Angular 16",
-          "NestJS",
-          "TDD",
-          "JSON",
-          "XML",
-          "Microservicios"
-        ],
+        "stack": ["Angular 16", "NestJS", "TDD", "JSON", "XML", "Microservicios"],
         "description": "Desarrollé una plataforma para migrar datos de XML a JSON, implementando microservicios con NestJS y desarrollo frontend en Angular con enfoque TDD."
       },
       {
@@ -76,12 +61,7 @@
         "title": "Plataforma de Noticias para McClatchy USA",
         "company": "Endava",
         "date": "Noviembre 2021 - Noviembre 2022",
-        "stack": [
-          "Vue.js",
-          "Vanilla JS",
-          "Jest.js",
-          "Jenkins"
-        ],
+        "stack": ["Vue.js", "Vanilla JS", "Jest.js", "Jenkins"],
         "description": "Lideré el desarrollo frontend con Vue.js y JavaScript, implementé pruebas unitarias con Jest y configuré despliegue continuo con Jenkins."
       },
       {
@@ -89,11 +69,7 @@
         "title": "Plataforma de Pagos Internacionales",
         "company": "Ontop",
         "date": "Enero 2022 - Marzo 2022",
-        "stack": [
-          "Angular",
-          "SSR",
-          "Microservicios"
-        ],
+        "stack": ["Angular", "SSR", "Microservicios"],
         "description": "Desarrollo de módulos para una plataforma de pagos internacionales utilizando Angular con Server-Side Rendering para mejorar el rendimiento y SEO."
       },
       {
@@ -101,11 +77,7 @@
         "title": "Sistema Logístico para DAT USA",
         "company": "Altimetrik Uruguay",
         "date": "Mayo 2021 - Diciembre 2021",
-        "stack": [
-          "Angular",
-          "Arquitectura Frontend",
-          "Librería de Componentes"
-        ],
+        "stack": ["Angular", "Arquitectura Frontend", "Librería de Componentes"],
         "description": "Lideré el equipo frontend para desarrollar un sistema logístico, estableciendo la arquitectura y diseñando una biblioteca de componentes reutilizables."
       },
       {
@@ -113,12 +85,7 @@
         "title": "Portal Bancario para Banbajio MX",
         "company": "StratioBD",
         "date": "Marzo 2021 - Noviembre 2021",
-        "stack": [
-          "Angular",
-          "RxJS",
-          "Material Design",
-          "APIs REST"
-        ],
+        "stack": ["Angular", "RxJS", "Material Design", "APIs REST"],
         "description": "Desarrollé módulos frontend para el portal bancario utilizando Angular con enfoque en arquitectura de microservicios y flujos reactivos con RxJS."
       }
     ]
@@ -144,4 +111,4 @@
   "social_title": "Sígueme en redes sociales",
   "footer_rights": "Todos los derechos reservados.",
   "download_cv": "Descargar CV"
-}
+} 

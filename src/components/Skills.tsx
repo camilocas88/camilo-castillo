@@ -28,9 +28,7 @@ export default function Skills() {
         'Next.js', 
         'Vue.js',
         'TailwindCSS',
-        'Bootstrap',
-        'Material UI',
-        'PrimeNG'
+        'Bootstrap'
       ] 
     },
     { 
@@ -49,12 +47,7 @@ export default function Skills() {
         'Express', 
         'MongoDB', 
         'PostgreSQL',
-        'MEAN Stack',
-        'AWS',
-        'Kafka',
-        'Cognito',
-        'Firebase',
-        'Cloudflare'
+        'MEAN Stack'
       ] 
     },
     { 
@@ -62,11 +55,7 @@ export default function Skills() {
       items: [
         'Jasmine',
         'Jest.js',
-        'Unit Testing',
-        'Cypress',
-        'Selenium',
-        'Postman',
-        'Swagger'
+        'Unit Testing'
       ] 
     },
     { 
@@ -79,13 +68,7 @@ export default function Skills() {
         'Figma', 
         'Docker',
         'Microservices',
-        'Feature Flags',
-        'CI/CD',
-        'Rancher',
-        'Kubernetes',
-        'Grafana',
-        'Harness',
-        'Azure DevOps'
+        'Feature Flags'
       ]
     },
     { 
@@ -93,14 +76,7 @@ export default function Skills() {
       items: [
         'Negotiation',
         'Leadership',
-        'Team Collaboration',
-        'Communication',
-        'Problem Solving',
-        'Adaptability',
-        'Time Management',
-        'Proactivity',
-        'Creativity',
-        'Teamwork'
+        'Team Collaboration'
       ] 
     }
   ];
