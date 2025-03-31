@@ -6,8 +6,8 @@
 // Establecer la versión actual del proyecto (siguiendo SemVer: MAJOR.MINOR.PATCH)
 const VERSION = {
   // Versión del proyecto (actualizar manualmente al hacer cambios importantes)
-  MAJOR: 0,
-  MINOR: 2,
+  MAJOR: 1,
+  MINOR: 0,
   PATCH: 0,
   
   // Información de despliegue (se actualiza automáticamente durante el deployment)

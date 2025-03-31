@@ -7,8 +7,8 @@
     "contact": "Contacto"
   },
   "hero": {
-    "subtitle": "Desarrollador Web",
-    "description": "Soy un desarrollador web apasionado enfocado en crear interfaces de usuario modernas y responsivas con React y Next.js.",
+    "subtitle": "Desarrollador Software",
+    "description": "Soy un desarrollador software apasionado enfocado en crear interfaces de usuario modernas y responsivas con React y Next.js.",
     "cta": {
       "projects": "Proyectos",
       "contact": "Contacto"
@@ -17,7 +17,7 @@
   "about": {
     "title": "Sobre Mí",
     "paragraphs": [
-      "Soy un desarrollador web con experiencia en la construcción de aplicaciones web responsivas y de alto rendimiento. Me especializo en JavaScript, React y Next.js para desarrollo frontend.",
+      "Soy un desarrollador software web con experiencia en la construcción de aplicaciones web responsivas y de alto rendimiento. Me especializo en JavaScript, React y Next.js para desarrollo frontend.",
       "Actualmente enfocado en crear interfaces de usuario intuitivas y mejorar la accesibilidad web en diferentes plataformas.",
       "Mi trayectoria profesional ha incluido trabajo con diversas tecnologías incluyendo React, Angular, Node.js y varias plataformas en la nube. Me enorgullezco de ser adaptable y mantenerme actualizado con las últimas tendencias tecnológicas y mejores prácticas."
     ],
@@ -94,12 +94,12 @@
     "en": "Inglés",
     "es": "Español"
   },
-  "hero_subtitle": "Desarrollador Web",
-  "hero_description": "Soy un desarrollador web apasionado enfocado en crear interfaces de usuario modernas y responsivas con React y Next.js.",
+  "hero_subtitle": "Desarrollador de Software",
+  "hero_description": "Soy un desarrollador software apasionado enfocado en crear interfaces de usuario modernas y responsivas con React y Next.js.",
   "projects_button": "Proyectos",
   "contact_button": "Contacto",
   "about_title": "Sobre Mí",
-  "about_paragraph1": "Soy un desarrollador web con experiencia en la construcción de aplicaciones web responsivas y de alto rendimiento. Me especializo en JavaScript, React y Next.js para desarrollo frontend.",
+  "about_paragraph1": "Soy un desarrollador software con experiencia en la construcción de aplicaciones web responsivas y de alto rendimiento. Me especializo en JavaScript, React y Next.js para desarrollo frontend.",
   "about_paragraph2": "Actualmente enfocado en crear interfaces de usuario intuitivas y mejorar la accesibilidad web en diferentes plataformas.",
   "name_label": "Nombre:",
   "email_label": "Email:",
