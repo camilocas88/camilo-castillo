@@ -4,7 +4,8 @@ import { useLanguage } from '@/i18n/LanguageContext';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect, useRef, useState } from 'react';
-import { FaEnvelope, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 export default function Contact() {
   const { translations } = useLanguage();
@@ -127,9 +128,9 @@ export default function Contact() {
               <span>LinkedIn</span>
             </a>
             
-            <a href="https://twitter.com/camilocastillo_" target="_blank" rel="noopener noreferrer" className="social-link">
-              <FaTwitter className="social-icon" />
-              <span>Twitter</span>
+            <a href="https://twitter.com/camilocas88" target="_blank" rel="noopener noreferrer" className="social-link">
+              <FaXTwitter className="social-icon" />
+              <span>X</span>
             </a>
           </div>
         </div>

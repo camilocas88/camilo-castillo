@@ -32,8 +32,8 @@ export default function Footer() {
             <a href="https://linkedin.com/in/camilo-castilloc" target="_blank" rel="noopener noreferrer" className="footer-link">
               LinkedIn
             </a>
-            <a href="https://twitter.com/camilocastillo" target="_blank" rel="noopener noreferrer" className="footer-link">
-              Twitter
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="footer-link">
+              X
             </a>
           </div>
         </div>
