@@ -1,0 +1,176 @@
+{
+  "name": "Camilo Castillo",
+  "title": "Software Developer || Senior Full-Stack Developer | Angular, Ionic & Flutter Specialist | MEAN Stack Expert",
+  "location": "Bogotá, Distrito Capital, Colombia",
+  "contact": {
+    "phone": "3043358678",
+    "email": "camilo.castillo88@outlook.com",
+    "linkedin": "https://www.linkedin.com/in/camilo-castilloc",
+    "website": "http://camilocastillo.me/"
+  },
+  "skills": [
+    "Mobile Applications",
+    "Flutter",
+    "Negotiation"
+  ],
+  "certifications": [
+    "Frontend con Angular",
+    "Curso de Unit Testing para MEAN con Jasmine",
+    "Curso de Fundamentos de TypeScript",
+    "Arquitectura-software",
+    "Bootstrap"
+  ],
+  "summary": "Senior Full-Stack Developer especializado en Angular, Ionic y Flutter, con experiencia en MEAN Stack. Lidera proyectos de migración tecnológica, arquitecturas de microservicios, y mejora de procesos y experiencia de usuario.",
+  "experiences": [
+    {
+      "company": "Newfire Global Partners - Centene",
+      "role": "Software Engineer",
+      "location": "Cambridge, Massachusetts, United States",
+      "start": "abril 2023",
+      "end": "Presente",
+      "responsibilities": [
+        "Migración a Angular 17 mejorando rendimiento y mantenibilidad",
+        "Formularios reactivos complejos y APIs",
+        "Manejo de feature flags y scripts de MongoDB",
+        "Colaboración con stakeholders"
+      ]
+    },
+    {
+      "company": "Lean Tech - Xybion",
+      "role": "MEAN Stack Developer SR",
+      "location": "New Jersey, United States",
+      "start": "abril 2022",
+      "end": "abril 2023",
+      "responsibilities": [
+        "Migración de XML a JSON",
+        "Angular 16 con TDD y microservicios con NestJS",
+        "Componentes reutilizables y mejoras en integración API"
+      ]
+    },
+    {
+      "company": "Endava - McClatchy USA",
+      "role": "Front End Lead",
+      "location": "North Carolina, United States",
+      "start": "noviembre 2021",
+      "end": "noviembre 2022",
+      "responsibilities": [
+        "Despliegue con Jenkins",
+        "Desarrollo con Vue.js y Vanilla JS",
+        "Testing con Jest.js"
+      ]
+    },
+    {
+      "company": "Ontop",
+      "role": "Angular Front-end SSR",
+      "location": "Remote",
+      "start": "enero 2022",
+      "end": "marzo 2022"
+    },
+    {
+      "company": "Altimetrik Uruguay - DAT USA",
+      "role": "Lead Frontend",
+      "location": "Beaverton, Oregon, United States",
+      "start": "mayo 2021",
+      "end": "diciembre 2021"
+    },
+    {
+      "company": "StratioBD - Banbajio MX",
+      "role": "Senior Frontend Developer Angular",
+      "location": "México",
+      "start": "marzo 2021",
+      "end": "noviembre 2021"
+    },
+    {
+      "company": "Banco Santander Chile",
+      "role": "Angular Sr Developer",
+      "location": "Santiago, Chile",
+      "start": "noviembre 2020",
+      "end": "mayo 2021"
+    },
+    {
+      "company": "Universidad de los Andes - Colombia",
+      "role": "Senior Frontend Developer",
+      "location": "Bogotá, Colombia",
+      "start": "octubre 2020",
+      "end": "diciembre 2020"
+    },
+    {
+      "company": "1st Consulting",
+      "role": "Lead front-end engineer",
+      "location": "Bogotá, Colombia",
+      "start": "julio 2019",
+      "end": "octubre 2020"
+    },
+    {
+      "company": "150 POR CIENTO",
+      "role": "Desarrollador front-end",
+      "location": "Bogotá, Colombia",
+      "start": "abril 2019",
+      "end": "julio 2019"
+    },
+    {
+      "company": "LaLicorera.com",
+      "role": "Desarrollador front-end",
+      "location": "Bogotá, Colombia",
+      "start": "octubre 2018",
+      "end": "abril 2019"
+    },
+    {
+      "company": "LINKSTUDIOS",
+      "role": "Desarrollador front-end junior",
+      "location": "Bogotá, Colombia",
+      "start": "octubre 2017",
+      "end": "octubre 2018"
+    },
+    {
+      "company": "Fiduciaria Bogotá",
+      "role": "Analista de gestión",
+      "location": "Bogotá, Colombia",
+      "start": "agosto 2014",
+      "end": "septiembre 2017"
+    },
+    {
+      "company": "Banco Mundo Mujer",
+      "role": "Analista de créditos",
+      "location": "Bogotá, Colombia",
+      "start": "febrero 2012",
+      "end": "mayo 2014"
+    },
+    {
+      "company": "MAPEO",
+      "role": "Analista de cobros",
+      "location": "Bogotá, Colombia",
+      "start": "junio 2010",
+      "end": "agosto 2012"
+    },
+    {
+      "company": "Covinoc S.A.",
+      "role": "Operador Covicheque",
+      "location": "Bogotá, Colombia",
+      "start": "noviembre 2009",
+      "end": "mayo 2010"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad Piloto de Colombia",
+      "degree": "Ingeniería Financiera",
+      "years": "2005 - 2012"
+    },
+    {
+      "institution": "Platzi",
+      "degree": "Arquitectura Frontend",
+      "years": "2018"
+    },
+    {
+      "institution": "Platzi",
+      "degree": "Fundamentos de Programación",
+      "years": "2018"
+    },
+    {
+      "institution": "Platzi",
+      "degree": "Frontend con React.JS",
+      "years": "2018"
+    }
+  ]
+}

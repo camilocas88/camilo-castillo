@@ -1,0 +1,112 @@
+{
+  "nav": {
+    "about": "Acerca de",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "subtitle": "Desarrollador Web",
+    "description": "Soy un desarrollador web apasionado enfocado en crear interfaces de usuario modernas y responsivas con React y Next.js.",
+    "cta": {
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    }
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "paragraphs": [
+      "Soy un desarrollador web con experiencia en la construcción de aplicaciones web responsivas y de alto rendimiento. Me especializo en JavaScript, React y Next.js para desarrollo frontend.",
+      "Actualmente enfocado en crear interfaces de usuario intuitivas y mejorar la accesibilidad web en diferentes plataformas.",
+      "Mi trayectoria profesional ha incluido trabajo con diversas tecnologías incluyendo React, Angular, Node.js y varias plataformas en la nube. Me enorgullezco de ser adaptable y mantenerme actualizado con las últimas tendencias tecnológicas y mejores prácticas."
+    ],
+    "education": "Ingeniería de Sistemas - Universidad Nacional de Colombia",
+    "education_label": "Educación:",
+    "languages": {
+      "title": "Idiomas",
+      "list": ["Inglés - Profesional", "Español - Nativo"]
+    }
+  },
+  "skills": {
+    "categories": {
+      "frontend": "Frontend",
+      "mobile": "Desarrollo Móvil",
+      "backend": "Backend",
+      "testing": "Testing",
+      "devops": "DevOps y Herramientas",
+      "soft": "Habilidades Blandas"
+    }
+  },
+  "projects": {
+    "items": [
+      {
+        "id": 1,
+        "title": "Plataforma para Centene Corp",
+        "company": "Newfire Global Partners",
+        "date": "Abril 2023 - Presente",
+        "stack": ["Angular 17", "MongoDB", "Microservicios", "Feature Flags"],
+        "description": "Rediseño completo de una plataforma médica. Lideré la migración a Angular 17, implementé formularios complejos con validación y desarrollé scripts para la gestión de datos en MongoDB."
+      },
+      {
+        "id": 2,
+        "title": "Sistema de Gestión para Xybion",
+        "company": "Lean Tech",
+        "date": "Abril 2022 - Abril 2023",
+        "stack": ["Angular 16", "NestJS", "TDD", "JSON", "XML", "Microservicios"],
+        "description": "Desarrollé una plataforma para migrar datos de XML a JSON, implementando microservicios con NestJS y desarrollo frontend en Angular con enfoque TDD."
+      },
+      {
+        "id": 3,
+        "title": "Plataforma de Noticias para McClatchy USA",
+        "company": "Endava",
+        "date": "Noviembre 2021 - Noviembre 2022",
+        "stack": ["Vue.js", "Vanilla JS", "Jest.js", "Jenkins"],
+        "description": "Lideré el desarrollo frontend con Vue.js y JavaScript, implementé pruebas unitarias con Jest y configuré despliegue continuo con Jenkins."
+      },
+      {
+        "id": 4,
+        "title": "Plataforma de Pagos Internacionales",
+        "company": "Ontop",
+        "date": "Enero 2022 - Marzo 2022",
+        "stack": ["Angular", "SSR", "Microservicios"],
+        "description": "Desarrollo de módulos para una plataforma de pagos internacionales utilizando Angular con Server-Side Rendering para mejorar el rendimiento y SEO."
+      },
+      {
+        "id": 5,
+        "title": "Sistema Logístico para DAT USA",
+        "company": "Altimetrik Uruguay",
+        "date": "Mayo 2021 - Diciembre 2021",
+        "stack": ["Angular", "Arquitectura Frontend", "Librería de Componentes"],
+        "description": "Lideré el equipo frontend para desarrollar un sistema logístico, estableciendo la arquitectura y diseñando una biblioteca de componentes reutilizables."
+      },
+      {
+        "id": 6,
+        "title": "Portal Bancario para Banbajio MX",
+        "company": "StratioBD",
+        "date": "Marzo 2021 - Noviembre 2021",
+        "stack": ["Angular", "RxJS", "Material Design", "APIs REST"],
+        "description": "Desarrollé módulos frontend para el portal bancario utilizando Angular con enfoque en arquitectura de microservicios y flujos reactivos con RxJS."
+      }
+    ]
+  },
+  "language": {
+    "en": "Inglés",
+    "es": "Español"
+  },
+  "hero_subtitle": "Desarrollador Web",
+  "hero_description": "Soy un desarrollador web apasionado enfocado en crear interfaces de usuario modernas y responsivas con React y Next.js.",
+  "projects_button": "Proyectos",
+  "contact_button": "Contacto",
+  "about_title": "Sobre Mí",
+  "about_paragraph1": "Soy un desarrollador web con experiencia en la construcción de aplicaciones web responsivas y de alto rendimiento. Me especializo en JavaScript, React y Next.js para desarrollo frontend.",
+  "about_paragraph2": "Actualmente enfocado en crear interfaces de usuario intuitivas y mejorar la accesibilidad web en diferentes plataformas.",
+  "name_label": "Nombre:",
+  "email_label": "Email:",
+  "location_label": "Ubicación:",
+  "languages_label": "Idiomas:",
+  "contact_title": "Contacto",
+  "contact_description": "¿Interesado en trabajar juntos? ¡Contáctame!",
+  "social_title": "Sígueme en redes sociales",
+  "footer_rights": "Todos los derechos reservados."
+} 
