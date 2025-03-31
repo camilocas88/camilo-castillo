@@ -14,7 +14,7 @@ export default function Contact() {
   const socialRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
   
-  // Detectar dispositivo móvil
+  // Detect mobile device
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -26,18 +26,18 @@ export default function Contact() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
   
-  // Registrar ScrollTrigger
+  // Register ScrollTrigger
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
   }, []);
   
-  // Configurar animaciones
+  // Configure animations
   useEffect(() => {
     if (sectionRef.current) {
-      // Añadir la clase animated para asegurar que la sección sea visible
+      // Add animated class to ensure section is visible
       sectionRef.current.classList.add('animated');
       
-      // Animar título
+      // Animate title
       gsap.fromTo(
         titleRef.current,
         { y: 50, opacity: 0 },
@@ -53,7 +53,7 @@ export default function Contact() {
         }
       );
       
-      // Animar contenido del contacto
+      // Animate contact content
       gsap.fromTo(
         formRef.current,
         { 
@@ -74,7 +74,7 @@ export default function Contact() {
         }
       );
       
-      // Animar redes sociales
+      // Animate social links
       gsap.fromTo(
         socialRef.current,
         { 
