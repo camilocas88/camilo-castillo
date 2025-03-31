@@ -24,7 +24,7 @@ export default function Home() {
   
   // Variable para usar mientras se arregla la importación de translations
   const t = {
-    hero_subtitle: language === 'es' ? 'Desarrollador Web' : 'Web Developer',
+    hero_subtitle: language === 'es' ? 'Desarrollador de Software' : 'Software Developer',
     projects_button: language === 'es' ? 'Proyectos' : 'Projects',
     contact_button: language === 'es' ? 'Contacto' : 'Contact'
   };
