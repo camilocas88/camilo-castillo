@@ -1252,8 +1252,16 @@ html {
 }
 
 .social-icon {
-  font-size: 1.3rem;
-  color: var(--primary-color);
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  max-width: 24px;
+  max-height: 24px;
+}
+
+.social-link:hover .social-icon {
+  transform: scale(1.1);
 }
 
 /* Estilos mobile para contacto */
@@ -1316,7 +1324,10 @@ html {
   }
   
   .social-icon {
-    color: var(--primary-color);
+    width: 20px;
+    height: 20px;
+    max-width: 20px;
+    max-height: 20px;
   }
   
   .social-links {

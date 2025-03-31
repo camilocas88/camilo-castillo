@@ -8,8 +8,20 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Camilo Castillo | Full Stack Developer',
-  description: 'Personal portfolio of Camilo Castillo, Full Stack Developer specialized in web and mobile development.',
+  title: 'Camilo Castillo | Software Developer',
+  description: 'Personal portfolio of Camilo Castillo, Software Developer specialized in web and mobile development.',
+  openGraph: {
+    title: 'Camilo Castillo | Software Developer',
+    description: 'Personal portfolio of Camilo Castillo, Software Developer specialized in web and mobile development.',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Camilo Castillo - Software Developer'
+      }
+    ]
+  }
 }
 
 export default function RootLayout({
