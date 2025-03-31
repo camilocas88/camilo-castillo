@@ -3,7 +3,7 @@
 import { useLanguage } from '@/i18n/LanguageContext';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { FaEnvelope, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 export default function Contact() {
@@ -12,6 +12,19 @@ export default function Contact() {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const formRef = useRef<HTMLDivElement>(null);
   const socialRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+  
+  // Detectar dispositivo móvil
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   
   // Registrar ScrollTrigger
   useEffect(() => {
@@ -94,9 +107,9 @@ export default function Contact() {
             {translations.contact_description}
           </p>
           
-          <a href="mailto:camilo.castillo88@outlook.com" className="contact-email-button">
+          <a href="mailto:camilo.castillo88@outlook.com" className="contact-email-button" title="camilo.castillo88@outlook.com">
             <FaEnvelope className="contact-icon" />
-            camilo.castillo88@outlook.com
+            {isMobile ? translations.email_me : 'camilo.castillo88@outlook.com'}
           </a>
         </div>
         
