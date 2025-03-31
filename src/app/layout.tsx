@@ -18,9 +18,9 @@ export const metadata: Metadata = {
     siteName: 'Camilo Castillo Portfolio',
     images: [
       {
-        url: '/images/og-image.png',
-        width: 1200,
-        height: 630,
+        url: '/images/logo-camilodev.png',
+        width: 192,
+        height: 192,
         alt: 'Camilo Castillo - Software Developer Portfolio'
       }
     ],
@@ -28,11 +28,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: 'Camilo Castillo | Software Developer',
     description: 'Personal portfolio of Camilo Castillo, Software Developer specialized in web and mobile development.',
     creator: '@camilocas88',
-    images: ['/images/og-image.png'],
+    images: ['/images/logo-camilodev.png'],
   },
   icons: {
     icon: '/images/logo-camilodev.png',
