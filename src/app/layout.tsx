@@ -21,7 +21,8 @@ export const metadata: Metadata = {
         url: '/images/logo-camilodev.png',
         width: 192,
         height: 192,
-        alt: 'Camilo Castillo - Software Developer Portfolio'
+        alt: 'Camilo Castillo - Software Developer Portfolio',
+        type: 'image/png'
       }
     ],
     locale: 'en_US',
@@ -35,7 +36,10 @@ export const metadata: Metadata = {
     images: ['/images/logo-camilodev.png'],
   },
   icons: {
-    icon: '/images/logo-camilodev.png',
+    icon: [
+      { url: '/images/logo-camilodev.png', sizes: '32x32', type: 'image/png' },
+      { url: '/images/logo-camilodev.png', sizes: '192x192', type: 'image/png' }
+    ],
     shortcut: '/images/logo-camilodev.png',
     apple: '/images/logo-camilodev.png',
     other: {

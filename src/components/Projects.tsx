@@ -4,7 +4,6 @@ import { useLanguage } from '@/i18n/LanguageContext';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect, useRef } from 'react';
-import DownloadCVButton from './DownloadCVButton';
 import ProjectCard from './ProjectCard';
 
 export default function Projects() {
@@ -117,9 +116,7 @@ export default function Projects() {
         ))}
       </div>
       
-      <div ref={downloadBtnRef} className="download-cv-container">
-        <DownloadCVButton />
-      </div>
+     
     </section>
   );
 } 
