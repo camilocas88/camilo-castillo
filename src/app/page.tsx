@@ -8,11 +8,10 @@ import Skills from "@/components/Skills";
 import { useLanguage } from '@/i18n/LanguageContext';
 import { gsap } from 'gsap';
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 export default function Home() {
   const profileImage = "/images/camilo-castillo.png";
-  const [loading, setLoading] = useState(true);
   const { language } = useLanguage();
   
   // Referencias para elementos animados
@@ -28,18 +27,10 @@ export default function Home() {
     projects_button: language === 'es' ? 'Proyectos' : 'Projects',
     contact_button: language === 'es' ? 'Contacto' : 'Contact'
   };
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
   
   // Animación cuando la página se carga completamente
   useEffect(() => {
-    if (!loading && heroRef.current) {
+    if (heroRef.current) {
       // Timeline para secuenciar las animaciones
       const tl = gsap.timeline();
       
@@ -82,15 +73,10 @@ export default function Home() {
         "-=1.2"
       );
     }
-  }, [loading]);
+  }, []);
 
   return (
     <main>
-      {loading && (
-        <div className="loader-container">
-          <div className="loader"></div>
-        </div>
-      )}
       <div className="min-h-screen">
         {/* Hero Section */}
         <section className="hero" ref={heroRef}>

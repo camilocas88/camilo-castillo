@@ -27,41 +27,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Loader */
-.loader-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)));
-  z-index: 9999;
-  transition: opacity 0.5s ease-out;
-}
-
-.loader {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: 4px solid rgba(255, 255, 255, 0.1);
-  border-top-color: var(--primary-color);
-  border-left-color: var(--secondary-color);
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.fade-out {
-  opacity: 0;
-  pointer-events: none;
-}
-
 /* Estilos básicos para la navegación */
 nav {
   position: fixed;
@@ -1121,6 +1086,7 @@ html {
   width: 100%;
   max-width: 400px;
   text-align: center;
+  margin: 0 auto;
 }
 
 .contact-email-button:hover {
@@ -1188,10 +1154,12 @@ html {
   .contact-form {
     width: 100%;
     align-items: center;
+    margin: 0 auto;
   }
   
   .contact-text {
     text-align: center;
+    width: 100%;
   }
   
   .contact-email-button {
@@ -1206,6 +1174,10 @@ html {
     overflow: hidden;
     text-overflow: ellipsis;
     margin: 0 auto;
+    max-width: 90%;
+    position: relative;
+    left: 0;
+    right: 0;
   }
   
   .contact-email-button .contact-icon {
@@ -1218,18 +1190,34 @@ html {
     box-shadow: 0 12px 25px rgba(126, 74, 231, 0.4);
   }
   
+  .contact-social {
+    width: 100%;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
   .contact-social-title {
     color: var(--secondary-color);
     text-align: center;
+    width: 100%;
   }
   
   .social-icon {
     color: var(--primary-color);
   }
   
+  .social-links {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  
   .social-link {
     background: rgba(70, 41, 129, 0.2);
     border: 1px solid rgba(126, 74, 231, 0.15);
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
   }
 }
 
