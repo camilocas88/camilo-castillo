@@ -38,25 +38,49 @@ jobs:
           ls -la
           echo "Current directory contents:"
           find . -type d -maxdepth 2
-      - name: Ensure out directory exists
+      - name: Ensure out directory exists with correct content
         run: |
-          if [ ! -d "out" ] && [ -d ".next" ]; then
-            echo "Creating out directory and copying from .next"
+          if [ -d "out" ]; then
+            echo "Out directory exists"
+          else
+            echo "Creating out directory"
             mkdir -p out
-            if [ -d ".next/static" ]; then
-              mkdir -p out/_next
-              cp -r .next/static out/_next/
-            fi
-            if [ -d "public" ]; then
-              cp -r public/* out/
-            fi
-          elif [ ! -d "out" ]; then
-            echo "Creating empty out directory"
-            mkdir -p out
-            touch out/index.html
           fi
+          
+          if [ ! -f "out/index.html" ] && [ -f ".next/server/pages/index.html" ]; then
+            echo "Copying index.html from .next/server/pages/"
+            cp .next/server/pages/index.html out/
+          fi
+          
+          if [ ! -f "out/index.html" ]; then
+            echo "Creating basic index.html that redirects to /camilo-castillo/"
+            echo '<!DOCTYPE html>' > out/index.html
+            echo '<html>' >> out/index.html
+            echo '<head>' >> out/index.html
+            echo '  <meta charset="utf-8">' >> out/index.html
+            echo '  <title>Redirecting...</title>' >> out/index.html
+            echo '  <meta http-equiv="refresh" content="0; URL=/camilo-castillo/">' >> out/index.html
+            echo '  <link rel="canonical" href="/camilo-castillo/">' >> out/index.html
+            echo '</head>' >> out/index.html
+            echo '<body>' >> out/index.html
+            echo '  <p>Redirecting to <a href="/camilo-castillo/">/camilo-castillo/</a>...</p>' >> out/index.html
+            echo '</body>' >> out/index.html
+            echo '</html>' >> out/index.html
+          fi
+          
+          if [ -d ".next/static" ]; then
+            echo "Copying static files"
+            mkdir -p out/_next
+            cp -r .next/static out/_next/
+          fi
+          
+          if [ -d "public" ]; then
+            echo "Copying public files"
+            cp -r public/* out/
+          fi
+          
           echo "Out directory contents:"
-          ls -la out || echo "Out directory is empty or does not exist"
+          ls -la out || echo "Out directory is empty"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
