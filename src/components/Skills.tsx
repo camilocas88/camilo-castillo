@@ -28,7 +28,10 @@ export default function Skills() {
         'Next.js', 
         'Vue.js',
         'TailwindCSS',
-        'Bootstrap'
+        'Bootstrap',
+        'Material UI',
+        'PrimeNG'
+
       ] 
     },
     { 
@@ -36,7 +39,10 @@ export default function Skills() {
       items: [
         'Flutter', 
         'Ionic', 
-        'Mobile Applications'
+        'Mobile Applications',
+        'Capacitor',
+        'Cordova',
+        'Material Icons'
       ] 
     },
     { 
@@ -47,7 +53,9 @@ export default function Skills() {
         'Express', 
         'MongoDB', 
         'PostgreSQL',
-        'MEAN Stack'
+        'MEAN Stack',
+        'Java',
+
       ] 
     },
     { 
@@ -55,7 +63,11 @@ export default function Skills() {
       items: [
         'Jasmine',
         'Jest.js',
-        'Unit Testing'
+        'Unit Testing',
+        'Cypress',
+        'Selenium',
+        'Postman',
+        'Swagger'
       ] 
     },
     { 
@@ -68,7 +80,12 @@ export default function Skills() {
         'Figma', 
         'Docker',
         'Microservices',
-        'Feature Flags'
+        'Feature Flags',
+        'Rancher',
+        'Kubernetes',
+        'Grafana',
+        'Harness',
+        'Azure DevOps'
       ]
     },
     { 
