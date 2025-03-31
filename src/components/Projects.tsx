@@ -4,6 +4,7 @@ import { useLanguage } from '@/i18n/LanguageContext';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect, useRef } from 'react';
+import DownloadCVButton from './DownloadCVButton';
 import ProjectCard from './ProjectCard';
 
 export default function Projects() {
@@ -15,6 +16,7 @@ export default function Projects() {
   const sectionRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const projectsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const downloadBtnRef = useRef<HTMLDivElement>(null);
   
   // Registrar ScrollTrigger
   useEffect(() => {
@@ -65,8 +67,28 @@ export default function Projects() {
           }
         );
       });
+      
+      // Animar botón de descarga del CV
+      if (downloadBtnRef.current) {
+        gsap.fromTo(
+          downloadBtnRef.current,
+          { y: 30, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            delay: 0.2 * projects.length,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: 'top 70%',
+              toggleActions: 'play none none reverse'
+            }
+          }
+        );
+      }
     }
-  }, []);
+  }, [projects.length]);
   
   // Inicializar refs para los proyectos
   const setProjectRef = (el: HTMLDivElement | null, index: number) => {
@@ -93,6 +115,10 @@ export default function Projects() {
             />
           </div>
         ))}
+      </div>
+      
+      <div ref={downloadBtnRef} className="download-cv-container">
+        <DownloadCVButton />
       </div>
     </section>
   );

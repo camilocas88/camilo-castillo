@@ -5,6 +5,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
+import SmartLoader from '@/components/SmartLoader';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { gsap } from 'gsap';
 import Image from 'next/image';
@@ -77,6 +78,9 @@ export default function Home() {
 
   return (
     <main>
+      {/* Loader inteligente que se muestra solo mientras se cargan los recursos */}
+      <SmartLoader minimumDisplayTime={800} />
+      
       <div className="min-h-screen">
         {/* Hero Section */}
         <section className="hero" ref={heroRef}>

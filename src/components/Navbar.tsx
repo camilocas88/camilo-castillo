@@ -107,9 +107,6 @@ export default function Navbar() {
           <a href="#projects" className="nav-link">
             {translations.nav.projects}
           </a>
-          <a href="#experience" className="nav-link">
-            {translations.nav.experience}
-          </a>
           <a href="#contact" className="nav-link">
             {translations.nav.contact}
           </a>
