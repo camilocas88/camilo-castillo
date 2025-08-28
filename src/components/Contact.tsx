@@ -123,7 +123,7 @@ export default function Contact() {
               <span>GitHub</span>
             </a>
             
-            <a href="https://linkedin.com/in/camilo-castilloc" target="_blank" rel="noopener noreferrer" className="social-link">
+            <a href="https://www.linkedin.com/in/camilocastillodev/" target="_blank" rel="noopener noreferrer" className="social-link">
               <FaLinkedin className="social-icon" />
               <span>LinkedIn</span>
             </a>

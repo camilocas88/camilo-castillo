@@ -29,7 +29,7 @@ export default function Footer() {
             <a href="https://github.com/camilocas88" target="_blank" rel="noopener noreferrer" className="footer-link">
               GitHub
             </a>
-            <a href="https://linkedin.com/in/camilo-castilloc" target="_blank" rel="noopener noreferrer" className="footer-link">
+            <a href="https://www.linkedin.com/in/camilocastillodev/" target="_blank" rel="noopener noreferrer" className="footer-link">
               LinkedIn
             </a>
             <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="footer-link">

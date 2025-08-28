@@ -3,6 +3,7 @@
 import { useLanguage } from '@/i18n/LanguageContext';
 import { gsap } from 'gsap';
 import Image from 'next/image';
+import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import LanguageSwitcher from './LanguageSwitcher/LanguageSwitcher';
 
@@ -12,6 +13,31 @@ export default function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
   const { translations } = useLanguage();
   const menuRef = useRef(null);
+  const router = useRouter();
+  const pathname = usePathname();
+
+  // Función para manejar navegación a secciones
+  const handleNavigation = (sectionId: string) => {
+    // Si no estamos en la página principal, navegar primero a home
+    if (pathname !== '/') {
+      router.push(`/#${sectionId}`);
+    } else {
+      // Si ya estamos en home, simplemente hacer scroll a la sección
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    
+    // Cerrar menú móvil si está abierto
+    setIsMenuOpen(false);
+  };
+
+  // Función para navegar al home
+  const handleHomeNavigation = () => {
+    router.push('/');
+    setIsMenuOpen(false);
+  };
   
   // Detectar ancho de la ventana para determinar si es móvil
   useEffect(() => {
@@ -86,7 +112,7 @@ export default function Navbar() {
       className="navbar-container"
     >
       <div className="nav-content">
-        <a href="#" className="logo">
+        <button onClick={handleHomeNavigation} className="logo">
           <Image 
             src="/images/logo-camilodev.png" 
             alt="Camilo Castillo Logo" 
@@ -94,25 +120,25 @@ export default function Navbar() {
             height={40} 
             className="logo-image"
           />
-        </a>
+        </button>
         
         {/* Desktop menu */}
         <div className="nav-links desktop-only">
-          <a href="#sobre-mi" className="nav-link">
+          <button onClick={() => handleNavigation('sobre-mi')} className="nav-link">
             {translations.nav.about}
-          </a>
-          <a href="#skills" className="nav-link">
+          </button>
+          <button onClick={() => handleNavigation('skills')} className="nav-link">
             {translations.nav.skills}
-          </a>
-          <a href="#projects" className="nav-link">
+          </button>
+          <button onClick={() => handleNavigation('projects')} className="nav-link">
             {translations.nav.projects}
-          </a>
-          <a href="#experience" className="nav-link">
+          </button>
+          <button onClick={() => handleNavigation('experience')} className="nav-link">
             {translations.nav.experience}
-          </a>
-          <a href="#contact" className="nav-link">
+          </button>
+          <button onClick={() => handleNavigation('contact')} className="nav-link">
             {translations.nav.contact}
-          </a>
+          </button>
           <LanguageSwitcher />
         </div>
 
@@ -141,21 +167,21 @@ export default function Navbar() {
         style={{ height: 0, opacity: 0, overflow: 'hidden' }}
       >
         <div className="mobile-menu-content">
-          <a href="#sobre-mi" className="mobile-nav-link">
+          <button onClick={() => handleNavigation('sobre-mi')} className="mobile-nav-link">
             {translations.nav.about}
-          </a>
-          <a href="#skills" className="mobile-nav-link">
+          </button>
+          <button onClick={() => handleNavigation('skills')} className="mobile-nav-link">
             {translations.nav.skills}
-          </a>
-          <a href="#projects" className="mobile-nav-link">
+          </button>
+          <button onClick={() => handleNavigation('projects')} className="mobile-nav-link">
             {translations.nav.projects}
-          </a>
-          <a href="#experience" className="mobile-nav-link">
+          </button>
+          <button onClick={() => handleNavigation('experience')} className="mobile-nav-link">
             {translations.nav.experience}
-          </a>
-          <a href="#contact" className="mobile-nav-link">
+          </button>
+          <button onClick={() => handleNavigation('contact')} className="mobile-nav-link">
             {translations.nav.contact}
-          </a>
+          </button>
           <div className="mobile-language-switcher">
             <LanguageSwitcher />
           </div>

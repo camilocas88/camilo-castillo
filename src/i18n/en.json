@@ -7,8 +7,8 @@
     "contact": "Contact"
   },
   "hero": {
-    "subtitle": "Web Developer",
-    "description": "I'm a passionate web developer focused on creating modern and responsive user interfaces with React and Next.js.",
+    "subtitle": "Software Engineer - Centene | Healthcare AI Specialist",
+    "description": "I'm a Senior Full-Stack Developer specialized in Angular, with extensive experience in MEAN stack solutions and AI/NLP technologies to optimize healthcare processes and enhance user experiences.",
     "cta": {
       "projects": "Projects",
       "contact": "Contact"
@@ -17,9 +17,9 @@
   "about": {
     "title": "About Me",
     "paragraphs": [
-      "I'm a web developer with experience in building responsive and high-performance web applications. I specialize in JavaScript, React, and Next.js for frontend development.",
-      "Currently focused on creating intuitive user interfaces and improving web accessibility across different platforms.",
-      "My professional journey has involved working with diverse technologies including React, Angular, Node.js, and various cloud platforms. I pride myself on being adaptable and staying current with the latest technological trends and best practices."
+      "I'm a Senior Full-Stack Developer with extensive experience creating scalable, high-performance applications. I specialize in Frontend development with Angular (2-19), Ionic, and Flutter, and have strong expertise in building MEAN stack solutions that integrate MongoDB, Express.js, Angular, and Node.js.",
+      "Currently working as Software Engineer at Centene through Newfire Global Partners, where I lead Angular 19 migrations and implement AI/NLP capabilities to enhance healthcare processes.",
+      "Throughout my career, I've led innovative projects from technological migrations to implementing microservices architectures. In recent roles, I've also worked with Conversational AI and NLP technologies, including LangChain and OpenAI APIs for customer service automation."
     ],
     "education": "Finance Engineering - Universidad Piloto de Colombia",
     "education_label": "Education:",
@@ -35,6 +35,7 @@
       "backend": "Backend",
       "testing": "Testing",
       "devops": "DevOps & Tools",
+      "ai": "Artificial Intelligence",
       "soft": "Soft Skills"
     }
   },
@@ -42,51 +43,51 @@
     "items": [
       {
         "id": 1,
-        "title": "Platform for Centene Corp",
+        "title": "Healthcare AI Platform for Centene Corp",
         "company": "Newfire Global Partners",
         "date": "April 2023 - Present",
-        "stack": ["Angular 17", "MongoDB", "Microservices", "Feature Flags"],
-        "description": "Complete redesign of a medical platform. Led the migration to Angular 17, implemented complex forms with validation, and developed scripts for MongoDB data management."
+        "stack": ["Angular 19", "MongoDB", "NLP", "LangChain", "OpenAI APIs", "Feature Flags", "Microservices"],
+        "description": "Led successful migration to Angular 19 of a critical healthcare platform, significantly improving performance. Implemented Natural Language Processing (NLP) capabilities to extract structured insights from healthcare interactions. Developed complex reactive forms and managed feature flags for safe deployments."
       },
       {
         "id": 2,
-        "title": "Management System for Xybion",
+        "title": "Healthcare Laboratory System for Xybion",
         "company": "Lean Tech",
         "date": "April 2022 - April 2023",
-        "stack": ["Angular 16", "NestJS", "TDD", "JSON", "XML", "Microservices"],
-        "description": "Developed a platform for migrating data from XML to JSON, implementing microservices with NestJS and frontend development in Angular with a TDD approach."
+        "stack": ["Angular 16", "NestJS", "TDD", "Angular Material", "MongoDB", "Microservices", "Kanban"],
+        "description": "Complete modernization of healthcare legacy application, transforming it into a modern web platform with laboratory research protocols. Led XML to JSON migration, implemented TDD with Angular 16, and developed microservices with NestJS. Modified Angular Material core for custom components in multicultural team."
       },
       {
         "id": 3,
-        "title": "News Platform for McClatchy USA",
+        "title": "Frontend Architecture for McClatchy USA",
         "company": "Endava",
         "date": "November 2021 - November 2022",
-        "stack": ["Vue.js", "Vanilla JS", "Jest.js", "Jenkins"],
-        "description": "Led frontend development with Vue.js and JavaScript, implemented unit tests with Jest, and configured continuous deployment with Jenkins."
+        "stack": ["Vue.js", "Vanilla JS", "Jest.js", "Jenkins", "Scrum", "CI/CD"],
+        "description": "As Angular Architect and Frontend Lead, supervised application deployments using Jenkins and led developer teams. Collaborated using Scrum methodologies with Vue.js and JavaScript to create views for all company website publications. Implemented robust testing with Jest.js ensuring quality and user satisfaction."
       },
       {
         "id": 4,
-        "title": "International Payments Platform",
+        "title": "Fintech International Payments Platform",
         "company": "Ontop",
         "date": "January 2022 - March 2022",
-        "stack": ["Angular", "SSR", "Microservices"],
-        "description": "Development of modules for an international payment platform using Angular with Server-Side Rendering to improve performance and SEO."
+        "stack": ["Angular", "SSR", "Microservices", "TypeScript"],
+        "description": "Development of critical modules for fintech international payments platform using Angular with Server-Side Rendering to optimize performance and SEO. Implemented microservices architecture for scalability."
       },
       {
         "id": 5,
-        "title": "Logistics System for DAT USA",
+        "title": "Enterprise Logistics System for DAT USA",
         "company": "Altimetrik Uruguay",
         "date": "May 2021 - December 2021",
-        "stack": ["Angular", "Frontend Architecture", "Component Library"],
-        "description": "Led the frontend team to develop a logistics system, establishing the architecture and designing a reusable component library."
+        "stack": ["Angular", "Frontend Architecture", "Design System", "Component Library"],
+        "description": "As Lead Frontend, modernized legacy apps into performant SPAs. Established solid frontend architecture and designed reusable component library. Customized Angular Material components per brand guidelines, reducing bugs by 30% and boosting team velocity."
       },
       {
         "id": 6,
-        "title": "Banking Portal for Banbajio MX",
-        "company": "StratioBD",
+        "title": "Digital Banking Portal and Mobile Wallet",
+        "company": "StratioBD - Banbajio MX",
         "date": "March 2021 - November 2021",
-        "stack": ["Angular", "RxJS", "Material Design", "REST APIs"],
-        "description": "Developed frontend modules for the banking portal using Angular with a focus on microservices architecture and reactive flows with RxJS."
+        "stack": ["Angular", "Flutter", "RxJS", "Apache Kafka", "NestJS"],
+        "description": "Developed real-time financial applications with Angular and NestJS. Integrated Apache Kafka for event-driven architecture and created a Mobile Wallet app with Flutter. Implemented complex reactive flows with RxJS for banking transactions."
       }
     ]
   },

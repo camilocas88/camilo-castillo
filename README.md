@@ -25,4 +25,4 @@ Mi sitio web personal construido con Next.js, React y TailwindCSS. Este portafol
 
 ## Autor
 
-Camilo Castillo - [GitHub](https://github.com/camilocas88) - [LinkedIn](https://linkedin.com/in/camilo-castilloc)
+Camilo Castillo - [GitHub](https://github.com/camilocas88) - [LinkedIn](https://www.linkedin.com/in/camilocastillodev/)

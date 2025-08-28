@@ -1,11 +1,17 @@
+import CustomCursor from '@/components/CustomCursor'
 import Navbar from '@/components/Navbar'
+import TransitionCleanup from '@/components/TransitionCleanup'
 import { LanguageProvider } from '@/i18n/LanguageContext'
 import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Space_Grotesk } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const spaceGrotesk = Space_Grotesk({ 
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-space-grotesk'
+})
 
 export const metadata: Metadata = {
   title: 'Camilo Castillo | Software Developer',
@@ -65,7 +71,7 @@ export const metadata: Metadata = {
   verification: {
     google: 'verification_token',
     other: {
-      me: ['mailto:camilocas88@gmail.com'],
+      me: ['mailto:camilo.castillo88@outlook.com'],
     },
   },
 }
@@ -77,8 +83,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-[#0A0A0A] text-white`}>
+      <body className={`${spaceGrotesk.className} ${spaceGrotesk.variable} bg-[#0A0A0A] text-white`}>
         <LanguageProvider>
+          <TransitionCleanup />
+          <CustomCursor />
           <Navbar />
           <main className="min-h-screen">
             {children}

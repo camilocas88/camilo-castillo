@@ -5,197 +5,424 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect, useRef } from 'react';
 
-type SkillCategory = 'frontend' | 'mobile' | 'backend' | 'testing' | 'devops' | 'soft';
+interface SkillItem {
+  name: string;
+  percentage: number;
+  icon: string;
+}
 
-interface SkillGroup {
-  category: SkillCategory;
-  items: string[];
+interface SkillCategory {
+  title: string;
+  icon: string;
+  skills: SkillItem[];
 }
 
 export default function Skills() {
-  const { translations } = useLanguage();
+  const { language } = useLanguage();
   
-  const skills: SkillGroup[] = [
-    { 
-      category: 'frontend', 
-      items: [
-        'HTML5', 
-        'CSS3', 
-        'JavaScript', 
-        'TypeScript',
-        'Angular', 
-        'React', 
-        'Next.js', 
-        'Vue.js',
-        'TailwindCSS',
-        'Bootstrap',
-        'Material UI',
-        'PrimeNG'
-
-      ] 
-    },
-    { 
-      category: 'mobile', 
-      items: [
-        'Flutter', 
-        'Ionic', 
-        'Mobile Applications',
-        'Capacitor',
-        'Cordova',
-        'Material Icons'
-      ] 
-    },
-    { 
-      category: 'backend', 
-      items: [
-        'Node.js', 
-        'NestJS',
-        'Express', 
-        'MongoDB', 
-        'PostgreSQL',
-        'MEAN Stack',
-        'Java',
-
-      ] 
-    },
-    { 
-      category: 'testing', 
-      items: [
-        'Jasmine',
-        'Jest.js',
-        'Unit Testing',
-        'Cypress',
-        'Selenium',
-        'Postman',
-        'Swagger'
-      ] 
-    },
-    { 
-      category: 'devops', 
-      items: [
-        'Jenkins',
-        'Git', 
-        'GitHub', 
-        'VS Code', 
-        'Figma', 
-        'Docker',
-        'Microservices',
-        'Feature Flags',
-        'Rancher',
-        'Kubernetes',
-        'Grafana',
-        'Harness',
-        'Azure DevOps'
+  const skillCategories: SkillCategory[] = [
+    {
+      title: language === 'es' ? 'Desarrollo Frontend' : 'Frontend Development',
+      icon: '🎨',
+      skills: [
+        { name: 'Angular (2-19)', percentage: 95, icon: '🅰️' },
+        { name: 'TypeScript', percentage: 90, icon: '📘' },
+        { name: 'RxJS', percentage: 88, icon: '🔄' },
+        { name: 'React', percentage: 85, icon: '⚛️' },
+        { name: 'Vue.js', percentage: 80, icon: '💚' },
+        { name: 'Next.js', percentage: 80, icon: '⚫' },
+        { name: 'HTML5 & CSS3', percentage: 95, icon: '🌐' },
+        { name: 'SCSS/SASS', percentage: 90, icon: '🎨' },
+        { name: 'TailwindCSS', percentage: 85, icon: '🌊' },
+        { name: 'JavaScript (ES6+)', percentage: 92, icon: '💛' }
       ]
     },
-    { 
-      category: 'soft', 
-      items: [
-        'Negotiation',
-        'Leadership',
-        'Team Collaboration'
-      ] 
+    {
+      title: language === 'es' ? 'Backend & APIs' : 'Backend & APIs',
+      icon: '⚡',
+      skills: [
+        { name: 'Node.js', percentage: 90, icon: '💚' },
+        { name: 'NestJS', percentage: 85, icon: '🐱' },
+        { name: 'Express.js', percentage: 88, icon: '🚂' },
+        { name: 'Go (Golang)', percentage: 70, icon: '🐹' },
+        { name: 'MongoDB', percentage: 88, icon: '🍃' },
+        { name: 'PostgreSQL', percentage: 85, icon: '🐘' },
+        { name: 'REST APIs', percentage: 95, icon: '🔗' },
+        { name: 'GraphQL', percentage: 80, icon: '📊' }
+      ]
+    },
+    {
+      title: language === 'es' ? 'IA & DevOps' : 'AI & DevOps',
+      icon: '🚀',
+      skills: [
+        { name: 'LangChain & OpenAI', percentage: 85, icon: '🤖' },
+        { name: 'Docker & Kubernetes', percentage: 82, icon: '📦' },
+        { name: 'AWS Services', percentage: 78, icon: '☁️' },
+        { name: 'CI/CD (Jenkins)', percentage: 88, icon: '🔄' },
+        { name: 'Apache Kafka', percentage: 75, icon: '📡' },
+        { name: 'Microservices', percentage: 86, icon: '🏗️' },
+        { name: 'Git & GitHub', percentage: 95, icon: '🌟' },
+        { name: 'TDD & Testing', percentage: 85, icon: '🧪' }
+      ]
     }
   ];
   
   const sectionRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
-  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const categoryRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const progressBarRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const lastScrollY = useRef(0);
+  const scrollVelocity = useRef(0);
+  const isAnimationCompleted = useRef(false);
   
   // Asegurarse de que ScrollTrigger esté registrado
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
   }, []);
   
-  // Configurar las animaciones
+  // Detectar velocidad de scroll para animaciones inteligentes
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      scrollVelocity.current = Math.abs(currentScrollY - lastScrollY.current);
+      lastScrollY.current = currentScrollY;
+      
+      // Si el scroll es muy rápido (> 50px), completar animaciones inmediatamente
+      if (scrollVelocity.current > 50 && !isAnimationCompleted.current) {
+        completeAllAnimations();
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Función para completar todas las animaciones instantáneamente
+  const completeAllAnimations = () => {
+    if (isAnimationCompleted.current) return;
+    
+    isAnimationCompleted.current = true;
+    
+    progressBarRefs.current.forEach((progressBar) => {
+      if (progressBar) {
+        const percentage = parseInt(progressBar.getAttribute('data-percentage') || '0');
+        const percentageElement = progressBar.parentElement?.previousElementSibling?.querySelector('.skill-percentage');
+        
+        // Completar barra inmediatamente
+        gsap.set(progressBar, {
+          width: percentage + '%',
+          opacity: 1,
+          scale: 1
+        });
+        
+        // Mostrar porcentaje final
+        if (percentageElement) {
+          percentageElement.textContent = percentage + '%';
+        }
+      }
+    });
+  };
+
+  // Configurar las animaciones GSAP mejoradas
   useEffect(() => {
     if (sectionRef.current) {
-      // Animar el título
-      gsap.fromTo(
-        titleRef.current,
-        { y: 50, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.8,
+      // Asegurar que la sección sea visible inmediatamente
+      sectionRef.current.classList.add('animated');
+      sectionRef.current.style.opacity = '1';
+      sectionRef.current.style.visibility = 'visible';
+      sectionRef.current.style.display = 'block';
+      
+      // Timeout para asegurar que el DOM esté listo
+      const timer = setTimeout(() => {
+        const tl = gsap.timeline({
           scrollTrigger: {
             trigger: sectionRef.current,
             start: 'top 80%',
-            toggleActions: 'play none none reverse'
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse',
+            onEnter: () => {
+              if (sectionRef.current) {
+                sectionRef.current.classList.add('animated');
+              }
+            },
+            onLeave: () => {
+              // Al salir de la vista, marcar como completado para evitar re-animaciones
+              isAnimationCompleted.current = true;
+            },
+            onLeaveBack: () => {
+              if (sectionRef.current) {
+                sectionRef.current.classList.remove('animated');
+              }
+              // Reset para permitir re-animación si vuelve
+              isAnimationCompleted.current = false;
+            }
           }
+        });
+
+      // Animación del título con efecto de escritura
+      tl.fromTo(
+        titleRef.current,
+        { 
+          y: 100, 
+          opacity: 0,
+          scale: 0.8,
+          rotationX: 45
+        },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          rotationX: 0,
+          duration: 1.2,
+          ease: "back.out(1.7)"
         }
       );
       
-      // Animar cada tarjeta de habilidades con un ligero retraso entre ellas
-      cardsRef.current.forEach((card, index) => {
-        if (card) {
-          gsap.fromTo(
-            card,
-            { y: 70, opacity: 0 },
+      // Animar cada categoría con efectos 3D
+      categoryRefs.current.forEach((category, index) => {
+        if (category) {
+          tl.fromTo(
+            category,
+            { 
+              y: 150, 
+              opacity: 0,
+              scale: 0.7,
+              rotationY: 45,
+              transformOrigin: "center center"
+            },
             {
               y: 0,
               opacity: 1,
-              duration: 0.8,
-              delay: 0.2 * index,
-              ease: "power2.out",
-              scrollTrigger: {
-                trigger: sectionRef.current,
-                start: 'top 75%',
-                toggleActions: 'play none none reverse'
-              }
-            }
+              scale: 1,
+              rotationY: 0,
+              duration: 1,
+              ease: "power3.out"
+            },
+            `-=${0.7 - (index * 0.2)}`
           );
+
+          // Animación hover para las categorías
+          category.addEventListener('mouseenter', () => {
+            gsap.to(category, {
+              scale: 1.05,
+              rotationY: 5,
+              duration: 0.3,
+              ease: "power2.out"
+            });
+          });
+
+          category.addEventListener('mouseleave', () => {
+            gsap.to(category, {
+              scale: 1,
+              rotationY: 0,
+              duration: 0.3,
+              ease: "power2.out"
+            });
+          });
         }
       });
       
-      // Añadir clase para animaciones CSS
-      ScrollTrigger.create({
-        trigger: sectionRef.current,
-        start: 'top 80%',
-        onEnter: () => {
-          if (sectionRef.current) {
-            sectionRef.current.classList.add('animated');
+      // Animaciones avanzadas para las barras de progreso con orden secuencial
+      progressBarRefs.current.forEach((progressBar, globalIndex) => {
+        if (progressBar) {
+          const percentage = parseInt(progressBar.getAttribute('data-percentage') || '0');
+          
+          // Calcular índices de categoría y skill
+          const currentCategoryIndex = Math.floor(globalIndex / 10);
+          const currentSkillIndex = globalIndex % 10;
+          
+          // Delay secuencial: primero por categoría, luego por skill dentro de la categoría
+          const sequentialDelay = (currentCategoryIndex * 0.3) + (currentSkillIndex * 0.15);
+          
+          // Animación de la barra con efecto elástico
+          const barAnimation = tl.fromTo(
+            progressBar,
+            { 
+              width: '0%',
+              opacity: 0,
+              scale: 0.8
+            },
+            {
+              width: percentage + '%',
+              opacity: 1,
+              scale: 1,
+              duration: 1.2,
+              ease: "power2.out",
+              onUpdate: function() {
+                // Efecto de parpadeo durante el llenado
+                if (this.progress() < 0.9) {
+                  gsap.to(progressBar, {
+                    boxShadow: `0 0 ${8 + Math.random() * 8}px rgba(126, 74, 231, 0.6)`,
+                    duration: 0.1
+                  });
+                }
+              },
+              onComplete: function() {
+                // Pulso final cuando se completa
+                gsap.to(progressBar, {
+                  boxShadow: '0 0 15px rgba(126, 74, 231, 0.8)',
+                  duration: 0.3,
+                  yoyo: true,
+                  repeat: 1
+                });
+              }
+            },
+            0.5 + sequentialDelay
+          );
+
+          // Animación del porcentaje contador sincronizada
+          const percentageElement = progressBar.parentElement?.previousElementSibling?.querySelector('.skill-percentage');
+          if (percentageElement) {
+            const counterObject = { value: 0 };
+            tl.to(
+              counterObject,
+              { 
+                value: percentage,
+                duration: 1.2,
+                ease: "power2.out",
+                onUpdate: function() {
+                  if (percentageElement) {
+                    percentageElement.textContent = Math.round(counterObject.value) + '%';
+                  }
+                }
+              },
+              0.5 + sequentialDelay
+            );
           }
-        },
-        onLeaveBack: () => {
-          if (sectionRef.current) {
-            sectionRef.current.classList.remove('animated');
-          }
+
+          // Sistema inteligente: auto-completar después de cierto tiempo
+          const quickScrollTimer = setTimeout(() => {
+            if (progressBar && percentageElement && !isAnimationCompleted.current) {
+              // Si después de 4 segundos la animación no ha completado, acelerar suavemente
+              gsap.to(progressBar, {
+                width: percentage + '%',
+                duration: 0.5,
+                ease: "power2.out"
+              });
+              
+              if (percentageElement) {
+                const currentValue = parseInt(percentageElement.textContent?.replace('%', '') || '0');
+                gsap.to({ value: currentValue }, {
+                  value: percentage,
+                  duration: 0.5,
+                  ease: "power2.out",
+                  onUpdate: function() {
+                    if (percentageElement) {
+                      percentageElement.textContent = Math.round(this.targets()[0].value) + '%';
+                    }
+                  }
+                });
+              }
+            }
+          }, 4000);
+
+          // Cleanup del timer
+          barAnimation.eventCallback("onComplete", () => {
+            clearTimeout(quickScrollTimer);
+          });
+
+          // Marcar como completada cuando termine
+          barAnimation.eventCallback("onComplete", () => {
+            if (globalIndex === progressBarRefs.current.length - 1) {
+              // Última animación completada
+              isAnimationCompleted.current = true;
+            }
+          });
         }
       });
+
+      // Efecto de partículas flotantes
+      const createFloatingParticles = () => {
+        const particles = [];
+        for (let i = 0; i < 15; i++) {
+          const particle = document.createElement('div');
+          particle.className = 'floating-particle';
+          particle.style.cssText = `
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0;
+          `;
+          sectionRef.current?.appendChild(particle);
+          particles.push(particle);
+
+          gsap.set(particle, {
+            x: Math.random() * window.innerWidth,
+            y: Math.random() * 200 + 100
+          });
+
+          gsap.to(particle, {
+            y: '-=200',
+            x: `+=${Math.random() * 100 - 50}`,
+            opacity: 1,
+            duration: Math.random() * 3 + 2,
+            ease: "none",
+            repeat: -1,
+            delay: Math.random() * 2
+          });
+        }
+      };
+
+        // Crear partículas cuando la sección está visible
+        tl.call(createFloatingParticles, [], 0.5);
+      }, 100);
+
+      return () => {
+        clearTimeout(timer);
+      };
     }
   }, []);
   
-  // Inicializar la referencia para las tarjetas
-  const setCardRef = (el: HTMLDivElement | null, index: number) => {
-    cardsRef.current[index] = el;
+  // Funciones para referencias
+  const setCategoryRef = (el: HTMLDivElement | null, index: number) => {
+    categoryRefs.current[index] = el;
+  };
+  
+  const setProgressBarRef = (el: HTMLDivElement | null, index: number) => {
+    progressBarRefs.current[index] = el;
   };
   
   return (
-    <section id="skills" className="section" ref={sectionRef}>
-      <h2 className="section-title" ref={titleRef}>{translations.nav.skills}</h2>
+    <section id="skills" className="section skills-section animated" ref={sectionRef} style={{ opacity: 1, visibility: 'visible', display: 'block' }}>
+      <h2 className="section-title skills-title" ref={titleRef}>
+        {language === 'es' ? 'Experiencia Técnica' : 'Technical Expertise'}
+      </h2>
       
-      <div className="skills-container">
-        {skills.map((skillGroup, groupIndex) => (
-          <div 
-            key={skillGroup.category} 
-            className="skill-card"
-            ref={(el) => setCardRef(el, groupIndex)}
-          >
-            <h3 className="skill-category">{translations.skills.categories[skillGroup.category]}</h3>
+      <div className="skills-progress-container">
+        {skillCategories.map((category, categoryIndex) => (
+                           <div
+                   key={categoryIndex}
+                   className="skill-category-card clickable"
+                   ref={(el) => setCategoryRef(el, categoryIndex)}
+                 >
+            <div className="skill-category-header">
+              <span className="skill-category-icon">{category.icon}</span>
+              <h3 className="skill-category-title">{category.title}</h3>
+            </div>
             
-            <div className="skills-grid">
-              {skillGroup.items.map((skill, index) => (
-                <div 
-                  key={skill} 
-                  className="skill-item"
-                  style={{ 
-                    animationDelay: `${index * 0.1}s`
-                  }}
-                >
-                  {skill}
-                </div>
-              ))}
+            <div className="skill-items">
+              {category.skills.map((skill, skillIndex) => {
+                const progressIndex = categoryIndex * 10 + skillIndex;
+                return (
+                  <div key={skillIndex} className="skill-progress-item">
+                    <div className="skill-info">
+                      <span className="skill-icon">{skill.icon}</span>
+                      <span className="skill-name">{skill.name}</span>
+                      <span className="skill-percentage">{skill.percentage}%</span>
+                    </div>
+                    <div className="progress-bar-container">
+                      <div 
+                        className="progress-bar"
+                        data-percentage={skill.percentage}
+                        ref={(el) => setProgressBarRef(el, progressIndex)}
+                      ></div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         ))}

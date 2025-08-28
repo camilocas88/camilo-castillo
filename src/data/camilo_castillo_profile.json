@@ -1,7 +1,7 @@
 {
   "name": "Camilo Castillo",
-  "title": "Software Developer || Senior Full-Stack Developer | Angular, Ionic & Flutter Specialist | MEAN Stack Expert",
-  "location": "Bogotá, Distrito Capital, Colombia",
+  "title": "Software Engineer - Centene @ Newfire Global Partners | Enhancing Healthcare with AI Solutions",
+  "location": "Bogotá, Colombia",
   "contact": {
     "phone": "3043358678",
     "email": "camilo.castillo88@outlook.com",
@@ -9,9 +9,35 @@
     "website": "http://camilocastillo.me/"
   },
   "skills": [
-    "Mobile Applications",
+    "Angular (2-19)",
+    "TypeScript",
+    "JavaScript",
+    "RxJS",
+    "Node.js",
+    "NestJS",
+    "Express.js",
+    "MongoDB",
+    "PostgreSQL",
+    "MySQL",
+    "GraphQL",
+    "REST APIs",
+    "Docker",
+    "Kubernetes",
+    "AWS (EC2, S3, Lambda)",
+    "CI/CD (GitLab, Jenkins, GitHub Actions)",
     "Flutter",
-    "Negotiation"
+    "Ionic",
+    "HTML5",
+    "CSS3/SCSS/SASS",
+    "LangChain",
+    "OpenAI APIs",
+    "NLP",
+    "Microservices",
+    "Apache Kafka",
+    "TDD",
+    "Jest",
+    "Jasmine",
+    "Cypress"
   ],
   "certifications": [
     "Frontend con Angular",
@@ -20,7 +46,7 @@
     "Arquitectura-software",
     "Bootstrap"
   ],
-  "summary": "Senior Full-Stack Developer especializado en Angular, Ionic y Flutter, con experiencia en MEAN Stack. Lidera proyectos de migración tecnológica, arquitecturas de microservicios, y mejora de procesos y experiencia de usuario.",
+  "summary": "Senior Full-Stack Developer con amplia experiencia creando aplicaciones escalables y de alto rendimiento. Me especializo en desarrollo Frontend con Angular, Ionic y Flutter, y tengo sólida experiencia construyendo soluciones MEAN stack que integran MongoDB, Express.js, Angular y Node.js. A lo largo de mi carrera, he liderado proyectos innovadores que optimizan procesos y mejoran significativamente las experiencias de usuario, desde migraciones tecnológicas hasta implementación de arquitecturas de microservicios. Mi pasión por la tecnología y la mejora continua me impulsa a entregar excelencia en cada proyecto. En roles recientes, también he trabajado con IA Conversacional y tecnologías NLP, incluyendo la integración de LLMs (Large Language Models) con herramientas como LangChain y APIs de OpenAI para mejorar la automatización del servicio al cliente y la gestión del conocimiento.",
   "experiences": [
     {
       "company": "Newfire Global Partners - Centene",
@@ -29,10 +55,12 @@
       "start": "abril 2023",
       "end": "Presente",
       "responsibilities": [
-        "Migración a Angular 17 mejorando rendimiento y mantenibilidad",
-        "Formularios reactivos complejos y APIs",
-        "Manejo de feature flags y scripts de MongoDB",
-        "Colaboración con stakeholders"
+        "Migración exitosa de aplicación healthcare a Angular 19, mejorando significativamente el rendimiento y mantenibilidad del sistema",
+        "Desarrollo de formularios reactivos complejos asegurando integridad de datos y integración perfecta con APIs",
+        "Gestión estratégica de feature flags, deployments y scripts MongoDB para mejorar estabilidad del sistema",
+        "Colaboración directa con stakeholders para alinear desarrollos con objetivos de negocio",
+        "Implementación de capacidades de Procesamiento de Lenguaje Natural (NLP) para extraer insights estructurados de interacciones relacionadas con healthcare",
+        "Mejora de experiencia de usuario y eficiencia operacional a través de automatización impulsada por IA"
       ]
     },
     {
@@ -42,21 +70,23 @@
       "start": "abril 2022",
       "end": "abril 2023",
       "responsibilities": [
-        "Migración de XML a JSON",
-        "Angular 16 con TDD y microservicios con NestJS",
-        "Componentes reutilizables y mejoras en integración API"
+        "Modernización de aplicación healthcare legacy mediante migración de XML a JSON, transformando la aplicación en una web moderna y user-friendly con protocolos de investigación de laboratorio",
+        "Implementación de Angular 16 con metodología TDD y desarrollo de microservicios usando NestJS",
+        "Desarrollo de componentes funcionales reutilizables modificando el core de Angular Material para crear componentes custom",
+        "Colaboración en equipo multicultural con profesionales de India, Ucrania, Estados Unidos y Canadá usando metodología Kanban"
       ]
     },
     {
       "company": "Endava - McClatchy USA",
-      "role": "Front End Lead",
+      "role": "Angular Architect / Senior Fullstack Developer",
       "location": "North Carolina, United States",
       "start": "noviembre 2021",
       "end": "noviembre 2022",
       "responsibilities": [
-        "Despliegue con Jenkins",
-        "Desarrollo con Vue.js y Vanilla JS",
-        "Testing con Jest.js"
+        "Liderazgo de equipo Frontend supervisando deployments de aplicaciones usando Jenkins y asignación de tickets a desarrolladores",
+        "Colaboración con desarrolladores usando metodologías Scrum, Vue.js y Vanilla JS para crear nuevas vistas para todas las publicaciones del sitio web de la compañía",
+        "Implementación de testing usando Jest.js, comprometido a mejorar y actualizar el sitio mediante implementación de nuevas features",
+        "Rol clave asegurando completación exitosa de proyectos y satisfacción tanto de la compañía como de usuarios"
       ]
     },
     {
