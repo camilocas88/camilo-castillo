@@ -2708,10 +2708,45 @@ button:hover ~ .custom-cursor,
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.contact-social-text {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.9rem;
+.contact-social {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.social-link {
   font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.social-link:hover {
+  color: #a855f7;
+  transform: translateY(-1px);
+}
+
+.social-link:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, #a855f7, #7c3aed);
+  animation: shimmer 1s ease-in-out;
+}
+
+.social-separator {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9rem;
+  color: #a855f7;
+  font-weight: 600;
+  margin: 0 0.25rem;
 }
 
 .contact-info {
@@ -2723,9 +2758,23 @@ button:hover ~ .custom-cursor,
 .contact-info-item {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.95rem;
+  gap: 0.75rem;
+}
+
+.contact-link {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  border-bottom: 1px solid transparent;
+}
+
+.contact-link:hover {
+  color: #a855f7;
+  border-bottom-color: #a855f7;
+  transform: translateX(2px);
 }
 
 .contact-icon {
@@ -3080,4 +3129,166 @@ body.transitioning, main.transitioning {
   font-weight: 500;
   color: rgba(255, 255, 255, 0.8);
   font-family: var(--font-space-grotesk), sans-serif;
+}
+
+/* ================================================
+   HERO RESPONSIVE IMPROVEMENTS - MOBILE FIXES
+================================================ */
+
+/* Mobile Hero Layout Fixes */
+@media (max-width: 768px) {
+  .hero-modern {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto auto;
+    gap: 1rem;
+    padding: 6rem 1.5rem 2rem 1.5rem; /* Top padding para navbar */
+    align-items: start;
+    overflow: hidden;
+  }
+  
+  /* Main Content Area */
+  .hero-content {
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    z-index: 10;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Title and Greeting */
+  .brand-name {
+    font-size: clamp(2.2rem, 8vw, 3.5rem) !important;
+    line-height: 1.1;
+    margin: 0;
+    text-align: left;
+  }
+  
+  .hero-greeting {
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+    margin: 0.5rem 0;
+    text-align: left;
+  }
+  
+  /* Description */
+  .hero-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-width: 100%;
+    margin: 1rem 0;
+    text-align: left;
+    opacity: 0.9;
+  }
+  
+  /* CTA Button */
+  .hero-cta {
+    margin: 1.5rem 0;
+    align-self: flex-start;
+  }
+  
+  .hire-me-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+  
+  /* Contact Info - Hidden on Mobile */
+  .hero-contact {
+    display: none;
+  }
+  
+  .contact-item {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+  
+  /* Social Links - Hidden on Mobile */
+  .hero-social {
+    display: none;
+  }
+  
+  /* Status Indicator */
+  .hero-status {
+    position: absolute;
+    top: 5rem;
+    right: 1.5rem;
+    z-index: 10;
+  }
+  
+  /* Scroll Indicator - Más espacio sin contacto */
+  .hero-scroll {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+  
+  /* Background Image - Smaller and Positioned */
+  .hero-bg-subtle {
+    width: 35% !important;
+    height: 30% !important;
+    bottom: 12% !important;
+    right: 8% !important;
+    opacity: 0.12 !important;
+    transform: scale(0.9) !important;
+  }
+  
+  /* Overlay Gradient - Less intense on mobile */
+  .hero-overlay-modern {
+    background: linear-gradient(
+      135deg,
+      rgba(16, 9, 20, 0.85) 0%,
+      rgba(70, 41, 129, 0.25) 40%,
+      rgba(126, 74, 231, 0.08) 70%,
+      rgba(126, 74, 231, 0.03) 100%
+    ) !important;
+  }
+}
+
+/* Extra Small Mobile Devices */
+@media (max-width: 480px) {
+  .hero-modern {
+    padding: 5rem 1rem 2rem 1rem;
+  }
+  
+  .brand-name {
+    font-size: clamp(1.8rem, 7vw, 2.8rem) !important;
+  }
+  
+  .hero-greeting {
+    font-size: clamp(1rem, 4vw, 1.4rem);
+  }
+  
+  .hero-description {
+    font-size: 0.85rem;
+  }
+  
+  /* Contact también oculto en mobile pequeño */
+  .hero-contact {
+    display: none;
+  }
+  
+  .contact-item {
+    font-size: 0.75rem;
+  }
+  
+  /* Hide scroll indicator on very small screens */
+  .hero-scroll {
+    display: none;
+  }
+  
+  /* Background image even smaller */
+  .hero-bg-subtle {
+    width: 30% !important;
+    height: 25% !important;
+    bottom: 15% !important;
+    right: 5% !important;
+    opacity: 0.08 !important;
+  }
 }

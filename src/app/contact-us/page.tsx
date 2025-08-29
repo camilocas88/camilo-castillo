@@ -33,7 +33,12 @@ export default function ContactUs() {
     projectPlaceholder: language === 'es' ? 'Escribe los detalles de tu proyecto' : 'Write your project details',
     sendButton: language === 'es' ? 'Enviar Mensaje' : 'Send Your Message',
     bookMeeting: language === 'es' ? 'Reservar una Reunión' : 'Book a Meeting',
-    socialLinks: language === 'es' ? '/ Twitter (X)   / LinkedIn   / GitHub   / CodePen' : '/ Twitter (X)   / LinkedIn   / GitHub   / CodePen'
+    socialLinks: {
+      twitter: { text: 'Twitter (X)', url: 'https://twitter.com/camilocas88' },
+      linkedin: { text: 'LinkedIn', url: 'https://www.linkedin.com/in/camilocas88/' },
+      github: { text: 'GitHub', url: 'https://github.com/camilocas88' },
+      codepen: { text: 'CodePen', url: 'https://codepen.io/camilocas88' }
+    }
   };
 
   // Animaciones GSAP
@@ -247,17 +252,64 @@ export default function ContactUs() {
             {/* Social Links & Contact Info */}
             <div className="contact-bottom">
               <div className="contact-social">
-                <span className="contact-social-text">{t.socialLinks}</span>
+                <span className="social-separator">/</span>
+                <a 
+                  href={t.socialLinks.twitter.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="social-link"
+                >
+                  {t.socialLinks.twitter.text}
+                </a>
+                <span className="social-separator">/</span>
+                <a 
+                  href={t.socialLinks.linkedin.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="social-link"
+                >
+                  {t.socialLinks.linkedin.text}
+                </a>
+                <span className="social-separator">/</span>
+                <a 
+                  href={t.socialLinks.github.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="social-link"
+                >
+                  {t.socialLinks.github.text}
+                </a>
+                <span className="social-separator">/</span>
+                <a 
+                  href={t.socialLinks.codepen.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="social-link"
+                >
+                  {t.socialLinks.codepen.text}
+                </a>
               </div>
 
               <div className="contact-info">
                 <div className="contact-info-item">
                   <span className="contact-icon">📅</span>
-                  <span className="contact-text">{t.bookMeeting}</span>
+                  <a 
+                    href="https://calendly.com/camilo-castillo88" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="contact-link"
+                  >
+                    {t.bookMeeting}
+                  </a>
                 </div>
                 <div className="contact-info-item">
                   <span className="contact-icon">✉️</span>
-                  <span className="contact-text">camilo.castillo88@outlook.com</span>
+                  <a 
+                    href="mailto:camilo.castillo88@outlook.com"
+                    className="contact-link"
+                  >
+                    camilo.castillo88@outlook.com
+                  </a>
                 </div>
               </div>
             </div>
