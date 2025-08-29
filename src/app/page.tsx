@@ -233,12 +233,12 @@ export default function Home() {
         "-=0.3"
       );
 
-      // 11. IMAGEN DE FONDO - Animación de aparición de la imagen
+      // 11. IMAGEN DE FONDO - Aparece inmediatamente en su posición final
       tl.call(() => {
         if (imageRef.current) {
           (imageRef.current as HTMLElement).classList.add('loaded');
         }
-      }, undefined, "+=0.2");
+      }, undefined, "+=0.1");
 
       // 12. EFECTO FINAL - Resplandor sutil en el título
       tl.to(titleRef.current, {
